@@ -1,6 +1,6 @@
 from aiogram import types
 from aiogram.dispatcher.filters.builtin import CommandStart
-
+from keyboards.default.Kompyuterlar import Kompyuterlar
 from loader import dp,baza,bot
 
 
@@ -13,7 +13,10 @@ async def bot_start(message: types.Message):
         baza.add_User_Kompyuterlar_123bot(Name=Name,Username=Username,Telegram_id=Telegram_id)
     except Exception as z:
         await message.answer(f"Salom, {z}!")
+    await message.answer(text=f'Kompyuter turini tnlang', reply_markup=Kompyuterlar)
 
+
+' Message_users '
 #@dp.message_handler(commands='Reklama',chat_id='')
 #async def bot_start(message: types.Message):
 #    sellect_all_users=baza.sellect_all_users_Kompyuterlar_123bot()
