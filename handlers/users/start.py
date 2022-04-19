@@ -5,7 +5,7 @@ from filters.Bot import Bot
 from loader import dp,baza,bot
 
 
-@dp.message_handler(Bot(),CommandStart())
+@dp.message_handler(CommandStart())
 async def bot_start(message: types.Message):
     Name = message.from_user.first_name
     Username = message.from_user.username
