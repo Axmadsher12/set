@@ -1,10 +1,11 @@
 from aiogram import types
 from aiogram.dispatcher.filters.builtin import CommandStart
 from keyboards.default.Kompyuterlar import Kompyuterlar
+from filters.Bot import Bot
 from loader import dp,baza,bot
 
 
-@dp.message_handler(CommandStart())
+@dp.message_handler(Bot(),CommandStart())
 async def bot_start(message: types.Message):
     Name = message.from_user.first_name
     Username = message.from_user.username
@@ -13,7 +14,7 @@ async def bot_start(message: types.Message):
         baza.add_User_Kompyuterlar_123bot(Name=Name,Username=Username,Telegram_id=Telegram_id)
     except Exception as z:
         await message.answer(f"Salom, {z}!")
-    await message.answer(text=f'Kompyuter turini tnlang', reply_markup=Kompyuterlar)
+    await message.answer(text=f'Kompyuter turini tnlang',reply_markup=Kompyuterlar)
 
 
 ' Message_users '

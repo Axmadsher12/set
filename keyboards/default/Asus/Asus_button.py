@@ -1,5 +1,5 @@
 from aiogram.types import KeyboardButton,ReplyKeyboardMarkup
-Acer_Buttons=ReplyKeyboardMarkup(
+Asus_Buttons=ReplyKeyboardMarkup(
     keyboard=[
         [
             KeyboardButton(text="CORE i3🖥"),
