@@ -35,7 +35,7 @@ async def bot_echo(message: types.Message):
 
 @dp.message_handler(text='Menu')
 async def bot_echo(message: types.Message):
-    await message.answer(text='CORE i ni tanlang!', reply_markup=Kompyuterlar)
+    await message.answer(text='Kompyuterni tanlang!', reply_markup=Kompyuterlar)
 
 
 
