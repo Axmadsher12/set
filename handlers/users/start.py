@@ -14,7 +14,12 @@ async def bot_start(message: types.Message):
         baza.add_User_Kompyuterlar_123bot(Name=Name,Username=Username,Telegram_id=Telegram_id)
     except Exception as z:
         await message.answer(f"Salom, {z}!")
+
     await message.answer(text=f'Kompyuter turini tnlang',reply_markup=Kompyuterlar)
+
+@dp.message_handler(commands='Reklama')
+async def bot_start(message: types.Message):
+    await message.answer(text='Reklama')
 
 
 ' Message_users '
